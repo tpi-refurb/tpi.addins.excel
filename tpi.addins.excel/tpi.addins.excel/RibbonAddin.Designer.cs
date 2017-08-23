@@ -57,6 +57,7 @@
 			this.buttonPasteValue.Label = "Paste Value Only";
 			this.buttonPasteValue.Name = "buttonPasteValue";
 			this.buttonPasteValue.ShowImage = true;
+			this.buttonPasteValue.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonPasteValue_Click);
 			// 
 			// buttonAutoFillIncrement
 			// 
@@ -64,6 +65,7 @@
 			this.buttonAutoFillIncrement.Label = "AutoFill Increment Number";
 			this.buttonAutoFillIncrement.Name = "buttonAutoFillIncrement";
 			this.buttonAutoFillIncrement.ShowImage = true;
+			this.buttonAutoFillIncrement.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonAutoFillIncrement_Click);
 			// 
 			// RibbonAddin
 			// 
