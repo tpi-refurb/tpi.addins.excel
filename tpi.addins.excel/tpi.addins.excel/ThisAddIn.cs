@@ -23,7 +23,11 @@ namespace tpi.addins.excel
 		public void TogglePanelVisibility(bool state) {
 			_taskPane.Visible = state;
 		}
-
+		public void AddLog(string message) {
+			if (_logPanel != null) {
+				_logPanel.AddLog(message);
+			}
+		}
 		private void InitializeAddin() {
 			_logPanel = new LogPane();
 			_taskPane = this.CustomTaskPanes.Add(_logPanel, "Logs");

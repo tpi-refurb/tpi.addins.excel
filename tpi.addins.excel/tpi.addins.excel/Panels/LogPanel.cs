@@ -13,5 +13,20 @@ namespace tpi.addins.excel {
 		public LogPane() {
 			InitializeComponent();
 		}
+
+		public void AddLog(string message) {
+			//Invoke(new MethodInvoker(delegate {
+				listBoxLog.Items.Add(message);
+				listBoxLog.SelectedIndex = listBoxLog.Items.Count - 1;
+			//}));
+		}
+
+		private void buttonAdd_Click(object sender, EventArgs e) {
+			AddLog(Guid.NewGuid().ToSafeString());
+		}
+
+		private void buttonClearLog_Click(object sender, EventArgs e) {
+			listBoxLog.Items.Clear();
+		}
 	}
 }

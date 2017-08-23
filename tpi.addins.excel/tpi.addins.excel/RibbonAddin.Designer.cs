@@ -29,24 +29,24 @@
 		/// </summary>
 		private void InitializeComponent() {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonAddin));
-			this.tab1 = this.Factory.CreateRibbonTab();
+			this.tabTelcomtrixAddin = this.Factory.CreateRibbonTab();
 			this.groupActions = this.Factory.CreateRibbonGroup();
 			this.buttonPasteValue = this.Factory.CreateRibbonButton();
 			this.buttonAutoFillIncrement = this.Factory.CreateRibbonButton();
 			this.group1 = this.Factory.CreateRibbonGroup();
 			this.toggleButtonViewLogs = this.Factory.CreateRibbonToggleButton();
-			this.tab1.SuspendLayout();
+			this.tabTelcomtrixAddin.SuspendLayout();
 			this.groupActions.SuspendLayout();
 			this.group1.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// tab1
+			// tabTelcomtrixAddin
 			// 
-			this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
-			this.tab1.Groups.Add(this.groupActions);
-			this.tab1.Groups.Add(this.group1);
-			this.tab1.Label = "TabAddIns";
-			this.tab1.Name = "tab1";
+			this.tabTelcomtrixAddin.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
+			this.tabTelcomtrixAddin.Groups.Add(this.groupActions);
+			this.tabTelcomtrixAddin.Groups.Add(this.group1);
+			this.tabTelcomtrixAddin.Label = "Telcomtrix";
+			this.tabTelcomtrixAddin.Name = "tabTelcomtrixAddin";
 			// 
 			// groupActions
 			// 
@@ -87,10 +87,10 @@
 			// 
 			this.Name = "RibbonAddin";
 			this.RibbonType = "Microsoft.Excel.Workbook";
-			this.Tabs.Add(this.tab1);
+			this.Tabs.Add(this.tabTelcomtrixAddin);
 			this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.RibbonAddin_Load);
-			this.tab1.ResumeLayout(false);
-			this.tab1.PerformLayout();
+			this.tabTelcomtrixAddin.ResumeLayout(false);
+			this.tabTelcomtrixAddin.PerformLayout();
 			this.groupActions.ResumeLayout(false);
 			this.groupActions.PerformLayout();
 			this.group1.ResumeLayout(false);
@@ -101,7 +101,7 @@
 
 		#endregion
 
-		internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
+		internal Microsoft.Office.Tools.Ribbon.RibbonTab tabTelcomtrixAddin;
 		internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupActions;
 		internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonPasteValue;
 		internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonAutoFillIncrement;
