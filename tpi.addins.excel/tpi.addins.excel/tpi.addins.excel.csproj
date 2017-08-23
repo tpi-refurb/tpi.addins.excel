@@ -164,7 +164,7 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="Extensions.cs" />
+    <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Panels\LogPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
