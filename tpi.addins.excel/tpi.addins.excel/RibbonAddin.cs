@@ -7,6 +7,7 @@ using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
 using Microsoft.Office.Tools.Ribbon;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace tpi.addins.excel {
 	public partial class RibbonAddin {
@@ -58,6 +59,10 @@ namespace tpi.addins.excel {
 					}
 				}
 			}
+		}
+
+		private void toggleButtonViewLogs_Click(object sender, RibbonControlEventArgs e) {
+			Globals.ThisAddIn.TogglePanelVisibility(toggleButtonViewLogs.Checked);
 		}
 	}
 }

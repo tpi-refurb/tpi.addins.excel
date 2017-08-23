@@ -6,14 +6,33 @@ using System.Xml.Linq;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
+using Microsoft.Office.Tools;
 
 namespace tpi.addins.excel
 {
     public partial class ThisAddIn
     {
-        private void ThisAddIn_Startup(object sender, System.EventArgs e)
+		private LogPane _logPanel;
+		private CustomTaskPane _taskPane;
+		private CustomTaskPane TaskPane{
+			get {
+				return this._taskPane;
+			}
+		}
+
+		public void TogglePanelVisibility(bool state) {
+			_taskPane.Visible = state;
+		}
+
+		private void InitializeAddin() {
+			_logPanel = new LogPane();
+			_taskPane = this.CustomTaskPanes.Add(_logPanel, "Logs");
+			_taskPane.Visible = true;
+		}
+		private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
-        }
+			InitializeAddin();
+		}
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {

@@ -33,14 +33,18 @@
 			this.groupActions = this.Factory.CreateRibbonGroup();
 			this.buttonPasteValue = this.Factory.CreateRibbonButton();
 			this.buttonAutoFillIncrement = this.Factory.CreateRibbonButton();
+			this.group1 = this.Factory.CreateRibbonGroup();
+			this.toggleButtonViewLogs = this.Factory.CreateRibbonToggleButton();
 			this.tab1.SuspendLayout();
 			this.groupActions.SuspendLayout();
+			this.group1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tab1
 			// 
 			this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
 			this.tab1.Groups.Add(this.groupActions);
+			this.tab1.Groups.Add(this.group1);
 			this.tab1.Label = "TabAddIns";
 			this.tab1.Name = "tab1";
 			// 
@@ -67,6 +71,18 @@
 			this.buttonAutoFillIncrement.ShowImage = true;
 			this.buttonAutoFillIncrement.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.buttonAutoFillIncrement_Click);
 			// 
+			// group1
+			// 
+			this.group1.Items.Add(this.toggleButtonViewLogs);
+			this.group1.Label = "group1";
+			this.group1.Name = "group1";
+			// 
+			// toggleButtonViewLogs
+			// 
+			this.toggleButtonViewLogs.Label = "View Logs";
+			this.toggleButtonViewLogs.Name = "toggleButtonViewLogs";
+			this.toggleButtonViewLogs.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.toggleButtonViewLogs_Click);
+			// 
 			// RibbonAddin
 			// 
 			this.Name = "RibbonAddin";
@@ -77,6 +93,8 @@
 			this.tab1.PerformLayout();
 			this.groupActions.ResumeLayout(false);
 			this.groupActions.PerformLayout();
+			this.group1.ResumeLayout(false);
+			this.group1.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -87,6 +105,8 @@
 		internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupActions;
 		internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonPasteValue;
 		internal Microsoft.Office.Tools.Ribbon.RibbonButton buttonAutoFillIncrement;
+		internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
+		internal Microsoft.Office.Tools.Ribbon.RibbonToggleButton toggleButtonViewLogs;
 	}
 
 	partial class ThisRibbonCollection {
